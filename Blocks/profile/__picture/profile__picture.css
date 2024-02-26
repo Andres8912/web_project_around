@@ -1,0 +1,11 @@
+.profile__picture{
+width: 120px;
+height: 120px;
+}
+
+@media (max-width: 320px) {
+.profile__picture {
+padding-left: 82px;
+padding-bottom: 30px;
+}    
+}

@@ -1,0 +1,12 @@
+.page{
+background-color: black;  
+margin: auto;
+font-family: Inter;
+}
+
+
+@media (max-width: 320px) {
+.page {
+width: 100%;
+}    
+}

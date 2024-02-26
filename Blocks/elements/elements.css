@@ -1,0 +1,12 @@
+.elements{
+margin: auto;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin: auto;
+padding-top: 80px;
+gap: 17px;
+padding-left: 200px;
+padding-right: 200px;
+justify-content: center;
+}

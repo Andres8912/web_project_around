@@ -1,0 +1,10 @@
+.element__text{
+font-family: Inter;
+font-size: 24px;
+font-weight: 900;
+line-height: 29px;
+text-align: left;
+width: 246px; 
+margin: auto;
+padding-top: 25px; 
+}
