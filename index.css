@@ -24,6 +24,12 @@
 @import url(./Blocks/popup/container/popup-container.css);
 @import url(./Blocks/popup/overlay/popup-overlay.css);
 @import url(./Blocks/popup/close-btn/close-btn.css);
+@import url(./Blocks/popup/container/profile-form/profile-form.css);
+@import url(./Blocks/popup/title/popup-title.css);
+@import url(./Blocks/popup/container/profile-form/edit-name/edit-name.css);
+@import url(./Blocks/popup/container/profile-form/edit-about/edit-about.css);
+@import url(./Blocks/popup/container/profile-form/submit-button/submit-button.css);
+@import url(./Blocks/popup/_show/popup_show.css);
 
 
 

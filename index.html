@@ -24,16 +24,17 @@ alt="foto de perfil del usuario">
 <a  href="#"   class="profile__edit-button">
  <img class="button__image" src="./Images/EditButton.png" alt="boton para editar info de perfil">  
 </a>
-<div class="popup" id="edit-popup">
+<div class="popup"  id="popup-profile">
 <div class="popup-overlay"></div>
 <div class="popup-container">
 <button class="close-btn"></button>
-<form id="profile-form">
-<label for="edit-name"></label>
-<input type="text" id="edit-name" name="edit-name">
-<label for="edit-about"></label>
-<textarea id="edit-about" name="edit-about"></textarea>
-<button type="submit"></button>
+<h3 class="popup-title">Edit profile</h3>
+<form class="profile-form" id="profile-form">
+<label class="edit-name" for="edit-name">Jacques Cousteau</label>
+<input type="text" id="edit-name" name="edit-name" required>
+<label class="edit-about" for="edit-about">Explorer</label>
+<textarea id="edit-about" name="edit-about" required></textarea>
+<button class="submit-button" type="submit">Save</button>
 </form>
 </div>
 </div>
