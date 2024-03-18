@@ -1,0 +1,20 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  width: 358px;
+  height: 50.15px;
+  top: 438.34px;
+  left: 461px;
+  border-radius: 2px;
+}
+
+.edit-name {
+  width: 358px;
+}
+
+.edit-about {
+  width: 358px;
+}

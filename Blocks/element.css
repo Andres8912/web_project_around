@@ -1,0 +1,32 @@
+.element {
+  width: 282px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
+}
+.element__group {
+  width: 20.76px;
+  height: 18.13px;
+  position: relative;
+  left: 239px;
+  bottom: 23px;
+  background-image: url(../../../../Images/Group.png);
+}
+
+.element__image {
+  width: 282px;
+  height: 282px;
+}
+
+.element__text {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  text-align: left;
+  width: 246px;
+  margin: auto;
+  padding-top: 25px;
+}

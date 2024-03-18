@@ -1,0 +1,36 @@
+.footer {
+  background-color: black;
+  margin: auto;
+  padding-top: 66px;
+  padding-bottom: 60px;
+}
+.footer__copyright {
+  color: #545454;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 318px;
+  position: relative;
+  left: 270px;
+}
+
+@media (max-width: 320px){
+ .footer{
+padding-top: 48px;
+padding-bottom: 36px;
+ } 
+ 
+.footer__copyright{
+width: 268px;
+line-height: 14px;
+display: flex;
+align-content: center;  
+width: 268px;
+line-height: 14px;
+display: flex;
+position: inherit;
+margin: 0;
+margin: auto;
+}
+}
