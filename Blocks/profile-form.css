@@ -18,3 +18,24 @@
 .edit-about {
   width: 358px;
 }
+
+@media (max-width: 320px) {
+
+  .profile-form{
+width: 238px;
+
+}
+
+.submit-button{
+width: 238px;
+}
+
+.edit-name{
+width: 238px;
+}
+
+.edit-about{
+width: 238px;
+}
+
+}

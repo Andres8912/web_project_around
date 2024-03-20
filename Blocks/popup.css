@@ -59,3 +59,23 @@
   rotate: 45°;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 320px) {
+.popup-container{
+width: 282px;
+height: 322px;
+
+}
+
+.popup-title{
+width: 238px;
+
+}
+
+.close-btn{
+top: -49px;
+right: 10px;
+}
+
+
+}

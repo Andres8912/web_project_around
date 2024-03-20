@@ -28,3 +28,32 @@ color: white;
 border: none;
 
 }
+
+@media (max-width: 320px){
+
+.form{
+width: 282px;
+height: 322px;
+align-items: center;
+} 
+
+.form__input{
+width: 238px;
+height: 27px;
+        
+}
+
+.form__submit{
+width: 238px;
+height: 46px; 
+    
+}
+
+#input-name{
+margin: 0;
+}
+
+#input-about{
+margin: 0;
+}
+}
