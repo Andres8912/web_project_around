@@ -16,8 +16,8 @@ padding-right: 30px;
 .profile__addbutton {
   width: 150px;
   height: 50px;
-  background-image: url(../Images/Rectangle2.svg);
-  background-repeat: no-repeat;
+  border: 1px solid;
+  color: white;
 }
 
 .profile__addbutton__image{

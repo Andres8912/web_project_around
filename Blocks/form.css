@@ -5,10 +5,8 @@ flex-direction: column;
 
 .form__input{
 width: 358px;
-border: none;
-background-image: url(../Images/Line.svg);
-background-repeat: no-repeat;
-background-position: bottom;
+border: 1px solid;
+
 }
 
 #input-name{

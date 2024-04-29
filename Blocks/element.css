@@ -5,19 +5,28 @@
   overflow: hidden;
   background: white;
   border-radius: 10px;
+  display: grid;
+  grid-template-areas: 
+    "image"
+    "text"
+    "group";
 }
+
+
 .element__group {
   width: 20.76px;
   height: 18.13px;
   position: relative;
   left: 239px;
   bottom: 23px;
-  background-image: url(../../../../Images/Group.png);
+  background-image: url(../Images/Group.png);
+  grid-area: group;
 }
 
 .element__image {
   width: 282px;
   height: 282px;
+  grid-area: image;
 }
 
 .element__text {
@@ -29,4 +38,5 @@
   width: 246px;
   margin: auto;
   padding-top: 25px;
+  grid-area: text;
 }

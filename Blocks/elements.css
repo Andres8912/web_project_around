@@ -1,15 +1,20 @@
 .elements{
 margin: auto;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
 margin: auto;
 padding-top: 80px;
 gap: 17px;
 padding-left: 200px;
 padding-right: 200px;
 justify-content: center;
+display: grid;
+grid-template-columns: repeat(auto-fill, 282px);
+grid-auto-rows: 361px;
 }
+
+
+
+
+
 
 @media (max-width: 320px) {
 
