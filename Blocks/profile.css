@@ -49,8 +49,7 @@ flex-direction: row;
 display: grid;
 grid-template-rows: 39px 22px;
 grid-template-columns: 373px 24px;
-grid-template-areas: "a b"
-                     "c ." ;
+grid-template-areas: "a b" "c ." ;
 gap: 18px;
 padding-top: 22px;
 align-items: baseline;
@@ -63,14 +62,14 @@ align-items: baseline;
   line-height: 22px;
   color: white;
   margin: 0;
-  grid-area: c ;
+  grid-area: c;
 }
 .profile__edit-button {
   width: 24px;
   cursor: pointer;
   height: 24px;
   color: black;
-  grid-area: b ;
+  grid-area: b;
 }
 
 @media (max-width: 320px) {
