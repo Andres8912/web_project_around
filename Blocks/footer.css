@@ -25,9 +25,7 @@ display: flex;
 align-content: center;  
 width: 268px;
 line-height: 14px;
-display: flex;
 position: inherit;
-margin: 0;
 margin: auto;
 }
 }
