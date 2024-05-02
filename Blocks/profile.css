@@ -20,12 +20,12 @@ padding-right: 30px;
   color: white;
 }
 
-.profile__addbutton__image{
+.profile__addbutton_image{
     padding: 14px 64px;
 }
 
 
-.button__image {
+.button-image {
   width: 24px;
   height: 24px;
 }
