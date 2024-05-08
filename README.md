@@ -6,4 +6,4 @@ Se incluyeron herramientas de script.js para darle dinamica a la pagina , por ej
 y que tambien quede grabada, se utilizaron en el codigo eventos para que esta funcionalidad sirva , como tambien que una vez se le de click en save se cierre una
 ventana emergente en donde se envia la informacion a editar.
 
-
+https://andres8912.github.io/web_project_around/#
