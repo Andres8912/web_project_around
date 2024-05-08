@@ -32,3 +32,8 @@ textprofession.textContent = newJob;
 }
 
 profileForm.addEventListener("submit", handleProfileFormSubmit);
+
+profileForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  popUpProfile.classList.remove('popup_show');
+});

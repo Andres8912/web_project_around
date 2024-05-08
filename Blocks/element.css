@@ -1,8 +1,5 @@
 .element {
   width: 282px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   background: white;
   border-radius: 10px;
   display: grid;
@@ -21,6 +18,7 @@
   bottom: 23px;
   background-image: url(../Images/Group.png);
   grid-area: group;
+  cursor: pointer;
 }
 
 .element__image {
@@ -39,4 +37,7 @@
   margin: auto;
   padding-top: 25px;
   grid-area: text;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
