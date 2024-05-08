@@ -71,7 +71,6 @@ align-items: baseline;
   height: 24px;
   color: black;
   grid-area: b;
-  cursor: pointer;
 }
 
 @media (max-width: 320px) {

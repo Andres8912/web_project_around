@@ -6,8 +6,7 @@ let jobInput = document.querySelector("#input-about");
 const profileForm = document.querySelector("#profile-form");
 let textname = document.querySelector(".profile__name");
 let textprofession = document.querySelector(".profile__profession")
-//Seleccion los inputs y guardarlos en una variable y dentro de mi funcion handleProfileFormSubmit deberia
-//modificar el textContent de el h2 y el p del profile e igualarlos a la propiedad value de la variable input
+
 function handleOpenProfileForm() {
   popUpProfile.classList.add("popup_show");
 }
