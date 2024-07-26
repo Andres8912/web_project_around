@@ -145,6 +145,30 @@
           </form>
         </div>
       </div>
+      <div class="popup" id="popup-addphoto">
+        <div class="popup-overlay"></div>
+        <div class="popup-container">
+          <button class="close-btn"></button>
+          <h3 class="popup-title">New Place</h3>
+          <form class="form" id="photo-form">
+            <input
+              type="text"
+              class="form__input"
+              id="input-title"
+              name="edit-place"
+              placeholder="Title"
+              required>
+            
+            <input
+              class="form__input"
+              id="input-url"
+              name="edit-url"
+              placeholder="Image Url"
+              required>
+            <button class="form__submit" id="addplace-form-button" type="submit">Crear</button>
+          </form>
+        </div>
+    </div>
     </div>
     <script src="./scripts/script.js"></script>
   </body>
