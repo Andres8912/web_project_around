@@ -5,10 +5,28 @@
   display: grid;
   grid-template-areas: 
     "image"
+    "image"
     "text"
     "group";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
 }
-
+.element__trash{
+  width: 18px;
+  height: 19.3px;
+  justify-self: end;
+  align-self: start;
+  margin-top: 18px;
+  margin-right: 15px;
+  background-image: url(../Images/Trash.png);
+  cursor: pointer;
+  grid-area: image;
+  z-index: 10;
+  transition: filter 0.3s ease;
+}
+.element__trash:hover{
+  filter: brightness(0.5);
+}
 
 .element__group {
   width: 20.76px;
@@ -19,6 +37,10 @@
   background-image: url(../Images/Group.png);
   grid-area: group;
   cursor: pointer;
+}
+
+.element__group-like{
+  background-image: url(../Images/corazon.png);
 }
 
 .element__image {
