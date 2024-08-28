@@ -14,7 +14,10 @@ const cardArea = document.querySelector(".elements");
 const inputCardTitle = document.querySelector("#input-title");
 const inputCardLink = document.querySelector("#input-url");
 const formCard = document.querySelector("#photo-form");
-
+const popUpNewPic = document.querySelector("#popup__pic");
+const closeImage = document.querySelector("photo-close-button");
+const popUpInfo = document.querySelector(".popup__info");
+const popUpImage = document.querySelector(".popup__image");
 
 const initialCards = [
   {
@@ -69,6 +72,9 @@ function PhotoCreator(title, link){
   likePhoto.addEventListener("click", function(){
     likePhoto.classList.toggle("element__group-like");
   })
+  PhotoCreator.addEventListener("click", function(){
+    handleOpenImage(title, link);
+  })
   return photo;
 }
 
@@ -114,6 +120,17 @@ function handlePhotoFormSubmit(evt){
   document.getElementById("popup-addphoto").classList.remove("popup_show");
 }
 
+
+function handleOpenImage(title, link){
+popUpImage.src = link
+popUpInfo.textContent = title
+popUpNewPic.classList.add(".popup__show")
+}
+
+function handleCloseImage(){
+popUpNewPic.classList.remove(".popup__show")
+}
+
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 formCard.addEventListener("submit", handlePhotoFormSubmit);
 
@@ -125,3 +142,4 @@ profileForm.addEventListener('submit', function(event) {
 
 btnPhoto.addEventListener("click", handleOpenPhotoForm)
 btnProfile.addEventListener("click", handleOpenProfileForm)
+closeImage.addEventListener("click", handleCloseImage)

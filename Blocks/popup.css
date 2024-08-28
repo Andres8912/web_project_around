@@ -9,6 +9,11 @@
 .popup_show {
   display: flex;
 }
+
+.popup__info{
+color: white;
+}
+
 .popup-title {
   font-family: Inter;
   font-size: 24px;
