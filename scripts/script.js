@@ -1,11 +1,10 @@
 const popUpProfile = document.querySelector("#popup-profile");
 const btnProfile = document.querySelector(".profile__edit-button");
-let profileform = document.querySelector("#profile-form");
 let nameInput = document.querySelector("#input-name");
 let jobInput = document.querySelector("#input-about");
 const profileForm = document.querySelector("#profile-form");
-let textname = document.querySelector(".profile__name");
-let textprofession = document.querySelector(".profile__profession");
+let textName = document.querySelector(".profile__name");
+let textProfession = document.querySelector(".profile__profession");
 const btnPhoto = document.querySelector(".profile__addbutton");
 const popUpPhoto = document.querySelector("#popup-addphoto");
 const btnclosePhoto = document.querySelector("#close-photo-form");
@@ -108,8 +107,8 @@ function handleProfileFormSubmit(evt) {
 const newName = nameInput.value;
 const newJob = jobInput.value;
 
-textname.textContent = newName;
-textprofession.textContent = newJob;
+textName.textContent = newName;
+textProfession.textContent = newJob;
 }
 
 function handlePhotoFormSubmit(evt){
