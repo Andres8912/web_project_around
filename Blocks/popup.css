@@ -6,13 +6,37 @@
   width: 100%;
   height: 100%;
 }
-.popup_show {
-  display: flex;
+.popup__show {
+ display: flex; 
+}
+
+#popup__pic{
+  width: auto;
+  width: 100%; 
+  height: 100%;
+  margin: auto;
+  z-index: 15;
+ flex-direction: column;
 }
 
 .popup__info{
-color: white;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 500px;
 }
+
+.popup__image{  
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  width: 40%;
+  
+}
+
 
 .popup-title {
   font-family: Inter;
@@ -62,6 +86,20 @@ color: white;
   border: none;
   color: white;
   background-repeat: no-repeat;
+}
+
+
+
+#popup__pic-close{
+  width: 40px;
+  height: 40px;
+  background: url(../../../Images/CloseIcon.png);
+  border: none;
+  color: white;
+  background-repeat: no-repeat; 
+  top: 25px;
+  left: 730px;
+  z-index: 60;
 }
 
 @media (max-width: 320px) {
