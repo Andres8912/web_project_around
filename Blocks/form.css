@@ -9,12 +9,12 @@ border: 1px solid;
 
 }
 
-#input-name{
+.form__input:first-child{
 margin-top: 54px;
 margin-bottom: 30px;
 }
 
-#input-about{
+.form__input:nth-child(2){
 margin-bottom: 48px;
 }
 

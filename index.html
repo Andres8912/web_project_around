@@ -9,53 +9,52 @@
   <body>
     <div class="page">
       <header class="header">
-          <img
-            class="header__logo"
-            src="./Images/Vector.png"
-            alt="logo project around the u.s"
-          />
-          <div class="header__line">
-        </div>
+        <img
+          class="header__logo"
+          src="./Images/Vector.png"
+          alt="logo project around the u.s"
+        />
+        <div class="header__line"></div>
       </header>
       <div class="profile">
-          <div class="profile__banner">
+        <div class="profile__banner">
           <img
-          class="profile__picture"
-          src="./Images/image.png"
-          alt="foto de perfil del usuario"
-        />
-        <div class="profile__info">
-          <h2 class="profile__name">Jacques Cousteau</h2>
-          <a href="#" class="profile__edit-button">
-            <img
-              class="button-image"
-              src="./Images/EditButton.png"
-              alt="boton para editar info de perfil"
-            />
-          </a>
-          <p class="profile__profession">Explorer</p>
-        </div>
+            class="profile__picture"
+            src="./Images/image.png"
+            alt="foto de perfil del usuario"
+          />
+          <div class="profile__info">
+            <h2 class="profile__name">Jacques Cousteau</h2>
+            <a href="#" class="profile__edit-button">
+              <img
+                class="button-image"
+                src="./Images/EditButton.png"
+                alt="boton para editar info de perfil"
+              />
+            </a>
+            <p class="profile__profession">Explorer</p>
+          </div>
         </div>
         <a href="#" class="profile__addbutton">
-          <img class="profile__addbutton-image" 
-          src="Images/Vector2.svg"
-          alt="boton para agregar fotos">
+          <img
+            class="profile__addbutton-image"
+            src="Images/Vector2.svg"
+            alt="boton para agregar fotos"
+          />
         </a>
       </div>
-      <section class="elements">
-      </section>
+      <section class="elements"></section>
       <footer class="footer">
         <p class="footer__copyright">© 2024 Around The U.S.</p>
       </footer>
       <div class="popup" id="popup__pic">
-        <button class="close-btn" id="popup__pic-close"></button>
-          <img
-          class ="popup__image"
-          src = ""
-          />
-          <h3 class="popup__info">
-          </h3>
-          </div>
+        <div class="popup-overlay"></div>
+        <div class="popup__content">
+          <button class="close-btn" id="popup__pic-close"></button>
+          <img class="popup__image" src="" />
+          <h3 class="popup__info"></h3>
+        </div>        
+      </div>
       <div class="popup" id="popup-profile">
         <div class="popup-overlay"></div>
         <div class="popup-container">
@@ -68,14 +67,16 @@
               id="input-name"
               name="edit-name"
               placeholder="Jacques Cousteau"
-              required>
-            
+              required
+            />
+
             <input
               class="form__input"
               id="input-about"
               name="edit-about"
               placeholder="Explorer"
-              required>
+              required
+            />
             <button class="form__submit" type="submit">Save</button>
           </form>
         </div>
@@ -92,22 +93,28 @@
               id="input-title"
               name="edit-place"
               placeholder="Title"
-              required>
-            
+              required
+            />
+
             <input
               class="form__input"
               id="input-url"
               name="edit-url"
               placeholder="Image Url"
-              required>
-            <button class="form__submit" id="addplace-form-button" type="submit">Crear</button>
+              required
+            />
+            <button
+              class="form__submit"
+              id="addplace-form-button"
+              type="submit"
+            >
+              Crear
+            </button>
           </form>
         </div>
         <template class="template-card">
           <div class="element">
-            <div class="element__trash">
-
-            </div>
+            <div class="element__trash"></div>
             <img
               class="element__image"
               src="./Images/kirill-pershin-1088404-unsplash.png"
@@ -117,7 +124,7 @@
             <div class="element__group"></div>
           </div>
         </template>
-    </div>
+      </div>
     </div>
     <script src="./scripts/script.js"></script>
   </body>
