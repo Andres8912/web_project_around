@@ -28,21 +28,9 @@
 .popup__info{
   color: white;
   width: 100%;
-  /*
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 500px;
-  */
 }
 
 .popup__image{  
-  /*
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 90px;
-  */
   width: 100%;
   max-height: 75vh;
   
