@@ -6,7 +6,6 @@ flex-direction: column;
 .form__input{
 width: 358px;
 border: 1px solid;
-
 }
 
 .form__input:first-child{
@@ -24,6 +23,25 @@ height: 50px;
 background-image: url(../Images/Rectangle.svg);
 color: white;
 border: none;
+
+}
+
+.form__submit:disabled{
+  background-image: url(../Images/Rectanglew.svg);
+  color: #CCCCCC;
+}
+
+.form__error{
+color: red;
+height: 16px;
+padding-bottom: 20px;
+width: 358px;
+text-align: left;
+}
+
+.form__input_type_error{
+border: 1px solid red;
+width: 358px;
 
 }
 
@@ -47,11 +65,11 @@ height: 46px;
     
 }
 
-#input-name{
+#form__name{
 margin: 0;
 }
 
-#input-about{
+#form__about{
 margin: 0;
 }
 }

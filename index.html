@@ -60,24 +60,29 @@
         <div class="popup-container">
           <button class="close-btn" id="profile-close-button"></button>
           <h3 class="popup-title">Edit profile</h3>
-          <form class="form" id="profile-form">
+          <form class="form" id="profile-form" novalidate>
             <input
               type="text"
-              class="form__input"
-              id="input-name"
+              class="form__input form__name"
+              id="form__name"
               name="edit-name"
               placeholder="Jacques Cousteau"
-              required
+              minlength="2"
+              maxlength="40"
             />
-
-            <input
-              class="form__input"
-              id="input-about"
+             <span class="form__error form__name-error"></span>
+            <input 
+              class="form__input form__about"
+              id="form__about"
               name="edit-about"
               placeholder="Explorer"
-              required
+              minlength="2"
+              maxlength="200"
             />
-            <button class="form__submit" type="submit">Save</button>
+            <span class="form__error form__about-error"></span>
+            <button class="form__submit" type="submit"
+            disabled
+            >Save</button>
           </form>
         </div>
       </div>
@@ -86,28 +91,31 @@
         <div class="popup-container">
           <button class="close-btn" id="photo-close-button"></button>
           <h3 class="popup-title">New Place</h3>
-          <form class="form" id="photo-form">
+          <form class="form" id="photo-form" novalidate>
             <input
               type="text"
-              class="form__input"
-              id="input-title"
+              class="form__input form__title"
+              id="form__title"
               name="edit-place"
               placeholder="Title"
-              required
+              minlength="2"
+              maxlength="30"
             />
-
+            <span class="form__error form__title-error">Por favor, rellena este campo</span>
             <input
-              class="form__input"
-              id="input-url"
+              class="form__input form__url"
+              id="form__url"
               name="edit-url"
               placeholder="Image Url"
-              required
+              type="url"
             />
+            <span class="form__error form__url-error">Por favor, introduce una dirección web</span> 
             <button
               class="form__submit"
               id="addplace-form-button"
               type="submit"
-            >
+              disabled
+              >
               Crear
             </button>
           </form>
@@ -127,5 +135,6 @@
       </div>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
