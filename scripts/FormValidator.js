@@ -67,7 +67,17 @@ export class FormValidator {
     enableValidation() {
       this._setEventListeners();
       this._formElement.addEventListener("submit", (evt) => {
+        this.inputSelector.querySelector(".form__name");
+        this.inputSelector.querySelector(".form__about");
+        
         evt.preventDefault();
+
+      
+        
+
+
       });
     }
+
+    
   }

@@ -17,6 +17,10 @@ export function handleOpenImage(title, link) {
     document.querySelectorAll(".popup-overlay").forEach((overlay) => {
       overlay.addEventListener("click", () => closeModal(overlay.closest(".popup")));
     });
+
+    document.querySelectorAll(".close-btn").forEach((overlay) => {
+      overlay.addEventListener("click", () => closeModal(overlay.closest(".popup")));
+    });
   
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
@@ -25,16 +29,6 @@ export function handleOpenImage(title, link) {
       }
     });
 
-    document.querySelector('form').addEventListener('submit', (event) =>{
-        const input = document.querySelector('#someInputField');
-        if (!input.value.trim()) {
-          alert('Por favor, completa todos los campos requeridos.');
-          event.preventDefault(); // Detiene el envío del formulario si la validación falla
-        } else {
-          // Aquí puedes añadir cualquier lógica adicional necesaria antes del envío
-          console.log('Formulario listo para ser enviado.');
-          // No se llama a event.preventDefault(), por lo que el formulario se enviará
-        }
-    });
+   
   }
 

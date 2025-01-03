@@ -46,7 +46,7 @@ export class Card {
       this._element = null;
     }
   
-    // Método privado para manejar el evento de "like" en la tarjeta
+    // Método privado para manejar el evento de like 
     _handleLikeIcon() {
       this._element
         .querySelector(".element__group")
