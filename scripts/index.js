@@ -1,7 +1,8 @@
 // index.js
 import { Card } from "./Card.js";
 import { FormValidator } from "./FormValidator.js";
-import { handleOpenImage, setOverlayAndEscapeClose } from "./Utils.js";
+import { setOverlayAndEscapeClose } from "./Utils.js";
+
 
 
 const popUpProfile = document.querySelector("#popup-profile");
@@ -95,3 +96,30 @@ setOverlayAndEscapeClose();
 
 btnPhoto.addEventListener("click", handleOpenPhotoForm)
 btnProfile.addEventListener("click", handleOpenProfileForm)
+
+function handlePhotoFormSubmit(evt) {
+  evt.preventDefault();
+
+  const item = {
+    name: inputCardTitle.value,
+    link: inputCardLink.value
+  }
+
+  const newPhoto = new Card(item, ".template-card");
+  cardArea.prepend(newPhoto.generateCard());
+
+  document.getElementById("popup-addphoto").classList.remove("popup__show");
+}
+
+
+profileForm.addEventListener("submit", handleProfileFormSubmit);
+formCard.addEventListener("submit", handlePhotoFormSubmit);
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+const newName = nameInput.value;
+const newJob = jobInput.value;
+
+textName.textContent = newName;
+textProfession.textContent = newJob;
+}

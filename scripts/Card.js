@@ -1,3 +1,7 @@
+import { handleOpenImage } from "./Utils.js";
+
+
+
 export class Card {
     constructor(data, templateSelector) {
       this._title = data.name;
@@ -18,10 +22,7 @@ export class Card {
     // Método privado para manejar el evento de click en la imagen
     _handleImageClick() {
       // Lógica para abrir la imagen en el popup
-      this.handleOpenImage(this._title, this._imageLink);
-    }
-
-    handleOpenImage() {
+    handleOpenImage(this._title, this._imageLink);
         
     }
   
