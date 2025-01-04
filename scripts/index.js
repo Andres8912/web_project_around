@@ -122,4 +122,6 @@ const newJob = jobInput.value;
 
 textName.textContent = newName;
 textProfession.textContent = newJob;
+
+popUpProfile.classList.remove("popup__show");
 }
