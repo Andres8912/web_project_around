@@ -55,7 +55,7 @@ export class Card {
     }
   
     // Método público que crea la tarjeta
-    generateCard() { console.log(this._data.name);
+    generateCard() { 
       this._element = this._getTemplate();
       this._setEventListeners();
       this._element.querySelector('.element__text').textContent = this._data.name;

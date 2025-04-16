@@ -1,11 +1,11 @@
-import { Card } from "./scripts/Card.js";
-import { FormValidator } from "./scripts/FormValidator.js";
-import { setOverlayAndEscapeClose } from "./scripts/Utils.js";
-import { Section } from "./scripts/Section.js";
-import { Popup } from "./scripts/Popup.js";
-import { PopupWithForm } from "./scripts/PopupWithForm.js"; 
-import { PopupWithImage } from "./scripts/PopupWithImage.js";
-import { UserInfo } from "./scripts/UserInfo.js";
+import { Card } from "../Components/Card.js";
+import { FormValidator } from "../Components/FormValidator.js";
+import { setOverlayAndEscapeClose } from "../Components/Utils.js";
+import { Section } from "../Components/Section.js";
+import { Popup } from "../Components/Popup.js";
+import { PopupWithForm } from "../Components/PopupWithForm.js"; 
+import { PopupWithImage } from "../Components/PopupWithImage.js";
+import { UserInfo } from "../Components/UserInfo.js";
 
 const popUpProfile = document.querySelector("#popup-profile");
 const btnProfile = document.querySelector(".profile__edit-button");
