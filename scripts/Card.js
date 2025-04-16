@@ -3,17 +3,17 @@ import { handleOpenImage } from "./Utils.js";
 
 
 export class Card {
-    constructor(data, templateSelector) {
-      this._title = data.name;
-      this._imageLink = data.link;
+    constructor(data, templateSelector, handleCardClick) {
+      this._data = data;
       this._templateSelector = templateSelector;
+      this._handleCardClick = handleCardClick;
     }
   
     // Método privado para obtener la plantilla
     _getTemplate() {
       const cardElement = document
         .querySelector(this._templateSelector)
-        .content.querySelector(".element")
+        .content.querySelector('.element')
         .cloneNode(true);
   
       return cardElement;
@@ -22,7 +22,7 @@ export class Card {
     // Método privado para manejar el evento de click en la imagen
     _handleImageClick() {
       // Lógica para abrir la imagen en el popup
-    handleOpenImage(this._title, this._imageLink);
+    handleOpenImage(this._data.name, this._data.link);
         
     }
   
@@ -55,12 +55,12 @@ export class Card {
     }
   
     // Método público que crea la tarjeta
-    generateCard() {
+    generateCard() { console.log(this._data.name);
       this._element = this._getTemplate();
-      this._element.querySelector(".element__image").src = this._imageLink;
-      this._element.querySelector(".element__text").textContent = this._title;
       this._setEventListeners();
-  
+      this._element.querySelector('.element__text').textContent = this._data.name;
+      this._element.querySelector('.element__image').src = this._data.link;
       return this._element;
     }
+
   }

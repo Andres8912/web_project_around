@@ -1,9 +1,11 @@
-// index.js
-import { Card } from "./Card.js";
-import { FormValidator } from "./FormValidator.js";
-import { setOverlayAndEscapeClose } from "./Utils.js";
-
-
+import { Card } from "./scripts/Card.js";
+import { FormValidator } from "./scripts/FormValidator.js";
+import { setOverlayAndEscapeClose } from "./scripts/Utils.js";
+import { Section } from "./scripts/Section.js";
+import { Popup } from "./scripts/Popup.js";
+import { PopupWithForm } from "./scripts/PopupWithForm.js"; 
+import { PopupWithImage } from "./scripts/PopupWithImage.js";
+import { UserInfo } from "./scripts/UserInfo.js";
 
 const popUpProfile = document.querySelector("#popup-profile");
 const btnProfile = document.querySelector(".profile__edit-button");
@@ -24,6 +26,8 @@ const popUpNewPic = document.querySelector("#popup__pic");
 const closeImage = document.querySelector("#popup__pic-close");
 const popUpInfo = document.querySelector(".popup__info");
 const popUpImage = document.querySelector(".popup__image");
+
+
 
 
 const initialCards = [
@@ -52,6 +56,8 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg"
   }
 ];
+
+
 
 function handleOpenProfileForm() {
   popUpProfile.classList.add("popup__show");
@@ -125,3 +131,4 @@ textProfession.textContent = newJob;
 
 popUpProfile.classList.remove("popup__show");
 }
+
