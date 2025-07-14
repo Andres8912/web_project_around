@@ -18,11 +18,20 @@
       </header>
       <div class="profile">
         <div class="profile__banner">
-          <img
-            class="profile__picture"
-            src="./Images/image.png"
-            alt="foto de perfil del usuario"
-          />
+          <div class="profile__picture-container">
+            <img
+              class="profile__picture"
+              src="./Images/image.png"
+              alt="foto de perfil del usuario"
+            />
+            <button class="profile__picture-edit-button">
+              <img
+                class="profile__picture-edit-icon"
+                src="./Images/EditButton.png"
+                alt="boton para editar foto de perfil"
+              />
+            </button>
+          </div>
           <div class="profile__info">
             <h2 class="profile__name">Jacques Cousteau</h2>
             <a href="#" class="profile__edit-button">
@@ -59,7 +68,7 @@
         <div class="popup-overlay"></div>
         <div class="popup-container">
           <button class="close-btn" id="profile-close-button"></button>
-          <h3 class="popup-title">Edit profile</h3>
+          <h3 class="popup-title">Editar perfil</h3>
           <form class="form" id="profile-form" novalidate>
             <input
               type="text"
@@ -82,7 +91,7 @@
             <span class="form__error form__about-error"></span>
             <button class="form__submit" type="submit"
             disabled
-            >Save</button>
+            >Guardar</button>
           </form>
         </div>
       </div>
@@ -90,14 +99,14 @@
         <div class="popup-overlay"></div>
         <div class="popup-container">
           <button class="close-btn" id="photo-close-button"></button>
-          <h3 class="popup-title">New Place</h3>
+          <h3 class="popup-title">Nuevo lugar</h3>
           <form class="form" id="photo-form" novalidate>
             <input
               type="text"
               class="form__input form__title"
               id="form__title"
               name="edit-place"
-              placeholder="Title"
+              placeholder="Título"
               minlength="2"
               maxlength="30"
             />
@@ -106,7 +115,7 @@
               class="form__input form__url"
               id="form__url"
               name="edit-url"
-              placeholder="Image Url"
+              placeholder="URL de la imagen"
               type="url"
             />
             <span class="form__error form__url-error">Por favor, introduce una dirección web</span> 
@@ -132,6 +141,38 @@
             <div class="element__group"></div>
           </div>
         </template>
+      </div>
+      <div class="popup" id="popup-confirm">
+        <div class="popup-overlay"></div>
+        <div class="popup-container">
+          <button class="close-btn" id="confirm-close-button"></button>
+          <h3 class="popup-title">¿Estás seguro?</h3>
+          <p class="popup__text">Una vez que elimines esta tarjeta, no podrás recuperarla.</p>
+          <div class="popup__buttons">
+            <button class="popup__cancel-button" type="button">Cancelar</button>
+            <button class="popup__confirm-button" type="button">Sí, eliminar</button>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup-avatar">
+        <div class="popup-overlay"></div>
+        <div class="popup-container">
+          <button class="close-btn" id="avatar-close-button"></button>
+          <h3 class="popup-title">Cambiar foto de perfil</h3>
+          <form class="form" id="avatar-form" novalidate>
+            <input
+              class="form__input form__avatar"
+              id="form__avatar"
+              name="edit-avatar"
+              placeholder="URL de la imagen"
+              type="url"
+            />
+            <span class="form__error form__avatar-error">Por favor, introduce una dirección web válida</span>
+            <button class="form__submit" type="submit" disabled>
+              Guardar
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     <script type="module" src="./Page/index.js"></script>

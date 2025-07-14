@@ -23,12 +23,22 @@ height: 50px;
 background-image: url(../Images/Rectangle.svg);
 color: white;
 border: none;
-
+transition: opacity 0.3s ease;
 }
 
 .form__submit:disabled{
   background-image: url(../Images/Rectanglew.svg);
   color: #CCCCCC;
+}
+
+.form__submit:disabled:not(.form__submit_loading) {
+  background-image: url(../Images/Rectanglew.svg);
+  color: #CCCCCC;
+}
+
+.form__submit_loading {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .form__error{
