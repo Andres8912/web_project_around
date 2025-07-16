@@ -20,19 +20,19 @@ margin-bottom: 48px;
 .form__submit{
 width: 358px;
 height: 50px;
-background-image: url(../Images/Rectangle.svg);
+background-image: url(../images/Rectangle.svg);
 color: white;
 border: none;
 transition: opacity 0.3s ease;
 }
 
 .form__submit:disabled{
-  background-image: url(../Images/Rectanglew.svg);
+  background-image: url(../images/Rectanglew.svg);
   color: #CCCCCC;
 }
 
 .form__submit:disabled:not(.form__submit_loading) {
-  background-image: url(../Images/Rectanglew.svg);
+  background-image: url(../images/Rectanglew.svg);
   color: #CCCCCC;
 }
 

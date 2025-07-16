@@ -18,7 +18,7 @@
   align-self: start;
   margin-top: 18px;
   margin-right: 15px;
-  background-image: url(../Images/Trash.png);
+  background-image: url(../images/Trash.png);
   cursor: pointer;
   grid-area: image;
   z-index: 10;
@@ -35,13 +35,13 @@
   position: relative;
   left: 239px;
   bottom: 23px;
-  background-image: url(../Images/Group.png);
+  background-image: url(../images/Group.png);
   grid-area: group;
   cursor: pointer;
 }
 
 .element__group-like{
-  background-image: url(../Images/corazon.png);
+  background-image: url(../images/corazon.png);
 }
 
 .element__image {
