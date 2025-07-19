@@ -1,13 +1,13 @@
-import { Card } from "../Components/Card.js";
-import { FormValidator } from "../Components/FormValidator.js";
-import { setOverlayAndEscapeClose } from "../Components/Utils.js";
-import { Section } from "../Components/Section.js";
-import { Popup } from "../Components/Popup.js";
-import { PopupWithForm } from "../Components/PopupWithForm.js"; 
-import { PopupWithImage } from "../Components/PopupWithImage.js";
-import { PopupWithConfirmation } from "../Components/PopupWithConfirmation.js";
-import { UserInfo } from "../Components/UserInfo.js";
-import { Api } from "../Components/Api.js";
+import { Card } from "../components/Card.js";
+import { FormValidator } from "../components/FormValidator.js";
+import { setOverlayAndEscapeClose } from "../components/Utils.js";
+import { Section } from "../components/Section.js";
+import { Popup } from "../components/Popup.js";
+import { PopupWithForm } from "../components/PopupWithForm.js"; 
+import { PopupWithImage } from "../components/PopupWithImage.js";
+import { PopupWithConfirmation } from "../components/PopupWithConfirmation.js";
+import { UserInfo } from "../components/UserInfo.js";
+import { Api } from "../components/Api.js";
 
 // Declaraciones de elementos del DOM
 const popUpProfile = document.querySelector("#popup-profile");
@@ -62,15 +62,13 @@ function setButtonLoadingState(button, isLoading, loadingText = "Guardando...", 
 
 // Función para manejar la eliminación de tarjetas
 function handleDeleteCard(cardId, cardElement) {
-  console.log(cardId, cardElement);
   api.deleteCard(cardId)
     .then(() => {
       // Eliminar la tarjeta del DOM
       cardElement.remove();
-      console.log("Tarjeta eliminada exitosamente");
     })
     .catch((err) => {
-      console.log("Error al eliminar la tarjeta:", err);
+      // mostrar un mensaje de error al usuario
     });
 }
 
@@ -137,8 +135,6 @@ function handleAvatarFormSubmit(evt) {
   // Enviar nueva foto de perfil al servidor con PATCH
   api.updateUserAvatar(newAvatarUrl)
     .then((userData) => {
-      console.log("Avatar actualizado:", userData);
-      // Actualizar la foto de perfil en la página
       profilePicture.src = userData.avatar;
       // Cerrar el popup
       popUpAvatar.classList.remove("popup__show");
@@ -146,7 +142,7 @@ function handleAvatarFormSubmit(evt) {
       avatarForm.reset();
     })
     .catch((err) => {
-      console.log("Error al actualizar el avatar:", err);
+      // mostrar un mensaje de error al usuario 
     })
     .finally(() => {
       // Restaurar estado normal del botón
@@ -210,7 +206,6 @@ function handlePhotoFormSubmit(evt) {
   // Enviar nueva tarjeta al servidor con POST
   api.createCard(item)
     .then((cardData) => {
-      console.log("Nueva tarjeta creada:", cardData);
       // Crear y mostrar la nueva tarjeta con los datos del servidor
       const newPhoto = new Card(cardData, ".template-card", null, openDeleteConfirmPopup);
       cardArea.prepend(newPhoto.generateCard());
@@ -220,7 +215,7 @@ function handlePhotoFormSubmit(evt) {
       formCard.reset();
     })
     .catch((err) => {
-      console.log("Error al crear la tarjeta:", err);
+      //  mostrar un mensaje de error al usuario 
     })
     .finally(() => {
       // Restaurar estado normal del botón
@@ -228,8 +223,6 @@ function handlePhotoFormSubmit(evt) {
     });
 }
 function openDeleteConfirmPopup(cardId, cardElement) {
-  console.log("Usando opendDeleteConfirmPopup")
-  //popupConfirm._pendingDelete = { cardId, cardElement };
   popupConfirm.open(() => {
     handleDeleteCard(cardId, cardElement)
   });
@@ -255,7 +248,6 @@ function handleProfileFormSubmit(evt) {
     about: newJob
   })
     .then((userData) => {
-      console.log("Perfil actualizado:", userData);
       // Actualizar la información del perfil en la página
       textName.textContent = userData.name;
       textProfession.textContent = userData.about;
@@ -263,7 +255,7 @@ function handleProfileFormSubmit(evt) {
       popUpProfile.classList.remove("popup__show");
     })
     .catch((err) => {
-      console.log("Error al actualizar el perfil:", err);
+      // mostrar un mensaje de error al usuario 
     })
     .finally(() => {
       // Restaurar estado normal del botón
@@ -281,7 +273,6 @@ function handleProfileFormSubmit(evt) {
 // Solicitud para obtener información del usuario
 api.getUserInfo()
   .then((userData) => {
-    console.log("Datos del usuario:", userData);
     // Actualizar la información del perfil en la página
     textName.textContent = userData.name;
     textProfession.textContent = userData.about;
@@ -291,13 +282,12 @@ api.getUserInfo()
     }
   })
   .catch((err) => {
-    console.log("Error al obtener datos del usuario:", err);
+    // mostrar un mensaje de error al usuario 
   });
 
 // Solicitud para obtener las tarjetas
 api.getInitialCards()
   .then((cardsData) => {
-    console.log("Datos de las tarjetas:", cardsData);
     // Renderizar las tarjetas desde el servidor
     cardsData.forEach((item) => {
       const card = new Card(item, ".template-card", null, openDeleteConfirmPopup);
@@ -305,6 +295,6 @@ api.getInitialCards()
     });
   })
   .catch((err) => {
-    console.log("Error al obtener tarjetas:", err);
+    //  mostrar un mensaje de error al usuario 
   });
 
